@@ -4,6 +4,7 @@
   "Persons": [
     {
       "$type": "Domain.Player, Domain",
+      "id": "fe21be6e-6181-40fc-be0e-66b1178c5c05",
       "UserName": "1",
       "Password": "LXT8lpz39Id0b+GfymTchBXYCA2Mht1nESsIc3fgU04=",
       "Points": 110,
@@ -11,6 +12,7 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "99c707a8-defe-4cd4-8a15-f03b0a26b028",
       "UserName": "Oliver",
       "Password": "0dJytb6xohygwVy4D5FW/L10BHPkgs6Bmee1uKqMv38=",
       "Points": 0,
@@ -18,6 +20,7 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "8ea1311e-9546-4c62-9e3b-34c683107cfa",
       "UserName": "Fabian",
       "Password": "CPFdKMEfAuoEOZlgcB5V2v0KHceI1rP8sSpY3Y3ev+4=",
       "Points": 0,
@@ -25,6 +28,7 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "dd713768-c197-4034-a769-0c2d9a356e88",
       "UserName": "tenzin",
       "Password": "t5d9ghNOGwJdRXlOkIoiC89jPHUyRPLLZVdxycNAy6E=",
       "Points": 0,
@@ -32,6 +36,7 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "7286d45e-75e1-4f9f-a590-c0e2dda5f2f5",
       "UserName": "Admin",
       "Password": "CocNQN0kpRUFcC5AwgezRhg8cL6ytRswksgkXGwPpio=",
       "Points": 0,
@@ -39,6 +44,7 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "af23abc1-e717-4e40-9452-4b54c65ddaea",
       "UserName": "11",
       "Password": "o4gLGnCX9kny+5dScTTtMMS4/HC7sacMEZCeVUY3fZY=",
       "Points": 540,
@@ -46,6 +52,7 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "41fdbfc2-b3b4-4f79-a718-4d1d6e9cc195",
       "UserName": "w",
       "Password": "BRZndNIEo3vSrjqqcmzcfpIN50gIob8YUSX03HYCbFY=",
       "Points": 0,
@@ -53,6 +60,7 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "9c233dfc-a160-43e8-bcc3-8a9374f1ef37",
       "UserName": "Fabia",
       "Password": "xTNHuGL4ePBdgIkO5D2qPjPtudiMp1ygQzAEX09O7b8=",
       "Points": 0,
@@ -60,6 +68,7 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "a88cfd31-75b4-4be4-b56b-00e9d8bf311a",
       "UserName": "Erdem",
       "Password": "0Vlx1toqnjXbFo99Oa5RlqIccj3BRcnV17OIaLqa5kg=",
       "Points": 120,
@@ -67,10 +76,19 @@
     },
     {
       "$type": "Domain.Player, Domain",
+      "id": "56b7eb44-2670-4b1c-827f-e06f22e4ee06",
       "UserName": "wad",
       "Password": "siOdQBNB79XUUoBdaFcMS/a7M2w0U2R0lMNcNJRcK6s=",
       "Points": 0,
       "Salt": "FLVtWSAkstNlqFGd0r8M/A=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "id": "fc9e8498-f974-4a78-9ae0-51528194050f",
+      "UserName": "admin",
+      "Password": "OfY8M9dGRDSiaAkaytBzwT4QgUmspHFoq8D6K8JSvuQ=",
+      "Points": -170,
+      "Salt": "U3Rzy4xZ2A9czfS7o4g61g=="
     }
   ]
 }

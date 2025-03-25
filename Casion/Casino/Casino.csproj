@@ -269,9 +269,9 @@
       <Project>{271bcb23-2b2b-4506-99f4-7f28d5a6c93c}</Project>
       <Name>Cards</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Game.Logik\Game.Logik.csproj">
+    <ProjectReference Include="..\Game.Logik\Game.Logic.csproj">
       <Project>{65cf11a0-1c78-4d2b-80d8-7c2032ea5806}</Project>
-      <Name>Game.Logik</Name>
+      <Name>Game.Logic</Name>
     </ProjectReference>
     <ProjectReference Include="..\LeaderBoardEntry\Models.csproj">
       <Project>{76c76948-b5c4-43d7-89f1-efa3cdcba97a}</Project>

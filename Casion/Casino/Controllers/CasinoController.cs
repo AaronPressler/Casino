@@ -20,7 +20,7 @@ namespace Casino.Controllers
         public List<string> pausedcards = new List<string>();
         public static bool DrawOrDeal = true;
 
-        Gamelogik g = new Gamelogik();
+        Logic g = new Logic();
 
         #region publicMethoden
         public List<LeaderBoardEntry.LoginModel> Converttolist(List<LoginModel> list)
@@ -91,7 +91,7 @@ namespace Casino.Controllers
             {
                 if (username == item.UserName)
                 {
-                    if (Gamelogik.VerifyPassword(user.Password, salt, item.Password))
+                    if (Logic.VerifyPassword(user.Password, salt, item.Password))
                     {
                         Session["UserName"] = user.UserName;
                         return View("Settings");

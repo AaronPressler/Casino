@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.JSON", "DataLayer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.XML", "DataLayer.XML\DataLayer.XML.csproj", "{475270E7-0E41-4483-BDA9-6D49B3B0F0D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Logik", "Game.Logik\Game.Logik.csproj", "{65CF11A0-1C78-4D2B-80D8-7C2032EA5806}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Logic", "Game.Logik\Game.Logic.csproj", "{65CF11A0-1C78-4D2B-80D8-7C2032EA5806}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "LeaderBoardEntry\Models.csproj", "{76C76948-B5C4-43D7-89F1-EFA3CDCBA97A}"
 EndProject
