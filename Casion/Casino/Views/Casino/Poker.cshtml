@@ -96,8 +96,12 @@
     <div class="punkte-box">
         <label for="punkte">Punkte:</label>
         <input type="text" id="punkte" value="@Model.Punkte" readonly />
-        <label for="multiplier">Multiplier:</label>
-        <input type="text" id="multiplier" value="@Model.Stake" readonly />
+        @using (Html.BeginForm("UpStake", "Casino", FormMethod.Post, new { id = "upStakeForm" }))
+        {
+            <label for="multiplier" id="multiplierLabel" style="cursor:pointer;">Multiplier:</label>
+            <!-- Durch das Hinzufügen des name-Attributs wird der Wert beim Abschicken des Formulars übergeben -->
+            <input type="text" id="multiplier" name="stakeValue" value="@Model.Stake" readonly />
+        }
         <label for="Earnings">Earnings:</label>
         <input type="text" id="ernings" value="@Model.LatestErnings" readonly />
     </div>
@@ -287,4 +291,7 @@
     function toggleSelection(button) {
         button.classList.toggle("selected");
     }
+    document.getElementById("multiplierLabel").addEventListener("click", function () {
+        document.getElementById("upStakeForm").submit();
+    });
 </script>
