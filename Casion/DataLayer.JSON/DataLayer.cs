@@ -19,6 +19,7 @@ namespace DataLayer.JSON
             _filename = ConfigurationManager.AppSettings["JSONDataPath"];
             _serializerSettings = new JsonSerializerSettings()
             {
+                //hallo aaron
                 TypeNameHandling = TypeNameHandling.Objects,
                 TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Simple
             };
