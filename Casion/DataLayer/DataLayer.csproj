@@ -58,9 +58,9 @@
       <Project>{475270e7-0e41-4483-bda9-6d49b3b0f0d4}</Project>
       <Name>DataLayer.XML</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataLayerSQL\DataLayerSQL.csproj">
+    <ProjectReference Include="..\DataLayerSQL\DataLayer.SQL.csproj">
       <Project>{83baa174-ef2f-426b-91a5-211fe8cf155b}</Project>
-      <Name>DataLayerSQL</Name>
+      <Name>DataLayer.SQL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{a77acbee-4a99-4a13-b862-f4522230cb16}</Project>

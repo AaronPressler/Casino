@@ -7,21 +7,21 @@ using MySql.Data.MySqlClient;
 using Google.Protobuf.Compiler;
 using System.Data;
 
-namespace DataLayerSQL
+namespace DataLayer.SQL
 {
 
-    internal class DataLayer : IDataLayer
+    public class DataLayer : IDataLayer
     {
         private MySqlConnection _connection;
         public DataLayer()
         {
-            _connection = new MySqlConnection("Server=localhost;Port=3306;Database=sew3_web_games;User ID=root;Password=;SslMode=none;");
+            _connection = new MySqlConnection("Server=62.178.173.135;Port=3306;Database=sew3_web_games;User ID=sew_db;Password=SewPassword123!;SslMode=none;;AllowPublicKeyRetrieval=True;");
         }
 
         public List<Player> LoadPersons()
         {
             List<Player> dbList = new List<Player>();
-            string query = "SELECT id, user_name, tokens, score, password_hash, role, salt, guid, birthdate FROM user";
+            string query = "SELECT id, Username, Points, password_hash, salt FROM user";
             _connection.Open();
             MySqlCommand cmd = new MySqlCommand(query, _connection);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -50,14 +50,14 @@ namespace DataLayerSQL
         {
             _connection.Close();
             string query = @"
-                    INSERT INTO user ( Username, Points, Password, Salt, id)
-                    VALUES ( @UserName, @Points, @Password, @Salt, @id)
+                    INSERT INTO user ( Username, Points, password_hash, salt, id)
+                    VALUES ( @UserName, @Points, @password_hash, @salt, @id)
                     ON DUPLICATE KEY UPDATE 
-                        Username = VALUES(Username),
-                        Points = VALUES(Points),
-                        Password = VALUES(Password),
-                        Salt = VALUES(Salt),
-                        id = VALUES(id),
+                        Username = @Username,
+                        Points = @Points,
+                        password_hash = @password_hash,
+                        salt = @salt;
+                       
                 ";
             _connection.Open();
 
@@ -66,8 +66,8 @@ namespace DataLayerSQL
                 // Parameter zuweisen
                 command.Parameters.AddWithValue("@UserName", person.UserName);
                 command.Parameters.AddWithValue("@Points", person.Points);
-                command.Parameters.AddWithValue("@Password", person.Password);
-                command.Parameters.AddWithValue("@Salt", person.Salt);
+                command.Parameters.AddWithValue("@password_hash", person.Password);
+                command.Parameters.AddWithValue("@salt", person.Salt);
                 command.Parameters.AddWithValue("@id", person.id.ToString());
 
                 // Query ausführen

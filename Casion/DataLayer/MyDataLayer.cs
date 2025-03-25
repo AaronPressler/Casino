@@ -14,11 +14,12 @@ namespace DataLayer
         private IDataLayer _dataLayer;
 
         public MyDataLayer() {
-            
-            _kindOfDataLayer = ConfigurationManager.AppSettings["DataLayer"];
+
+            _kindOfDataLayer = "MySQL";
+                //ConfigurationManager.AppSettings["DataLayer"]
             if (string.IsNullOrEmpty(_kindOfDataLayer))
             {
-                _kindOfDataLayer = "JSON";
+                _kindOfDataLayer = "MySQL";
             }
             switch (_kindOfDataLayer.ToUpper())
             {                
@@ -27,6 +28,9 @@ namespace DataLayer
                     break;
                 case "JSON":
                     _dataLayer = new DataLayer.JSON.DataLayer();
+                    break;
+                case "MYSQL":
+                    _dataLayer = new DataLayer.SQL.DataLayer();
                     break;
                 default:
                     throw new ArgumentException("undefined data layer configuration");
