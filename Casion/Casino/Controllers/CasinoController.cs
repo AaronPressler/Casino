@@ -343,6 +343,12 @@ namespace Casino.Controllers
             return View("Poker", Model.poker);
         }
 
+        public ActionResult UpStake(int amount)
+        {
+            if (DrawOrDeal && amount > 0)
+                Model.poker.Stake = amount;
+            return View("Poker", Model.poker);
+        }
         public ActionResult DownStake()
         {
             if (DrawOrDeal)
