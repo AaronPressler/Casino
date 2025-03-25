@@ -1,0 +1,102 @@
+﻿@model Casino.Models.PokerModel
+@{
+    ViewBag.Title = "Poker Game - Leaderboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="payout-table">
+    <thead>
+        <tr>
+            <th>Player Name</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var entry in Model.LeaderBoard)
+        {
+            <tr>
+                <td>@entry.PlayerName</td>
+                <td>@entry.Score</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="cards">
+    @for (int i = 0; i < 5; i++)
+    {
+        string imageName = Model.Cards[i].ToString() + ".png";
+        using (Html.BeginForm("HoldCard", "Casino", FormMethod.Post, new { @class = "card-form" }))
+        {
+            <button type="submit" class="card-button" style="background-image: url('@Url.Content("~/Content/Bilder/" + imageName)');">
+                <span class="sr-only">Hold Card @Model.Cards[i]</span>
+                <input type="hidden" name="card" value="@Model.Cards[i]" />
+            </button>
+        }
+    }
+</div>
+
+<div class="game-actions">h
+    @using (Html.BeginForm("UpStake", "Casino", FormMethod.Post))
+    {
+        <input type="submit" name="▲" value="▲" class="btn btn-primary" />
+    }
+    @using (Html.BeginForm("DownStake", "Casino", FormMethod.Post))
+    {
+        <input type="submit" name="▼" value="▼" class="btn btn-primary" />
+    }
+    
+    <input type="submit" id="deal-hold" value="Deal" class="btn btn-primary" onclick="doFunction();" />
+    
+</div>
+
+<script>
+
+    const dealHoldButton = document.getElementById("deal-hold");
+
+    document.getElementById("clickMe").onclick = doFunction;
+
+    doFunction()
+    { 
+        if (dealHoldButton.value === "Deal")
+        {
+            dealHoldButton.value = "Hold";
+            @using (Html.BeginForm("DealHold", "Casino", FormMethod.Post, new { id = "deal-hold-form" })) { }
+        }
+        else
+        {
+            dealHoldButton.value = "Deal";
+            @using (Html.BeginForm("DealHold", "Casino", FormMethod.Post, new { id = "deal-hold-form" })) { }
+        }
+    }
+</script>
+
+<style>
+    .cards {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .card-button {
+        width: 100px;
+        height: 140px;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+</style>

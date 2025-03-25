@@ -1,0 +1,290 @@
+﻿@{
+    ViewBag.Title = "Poker Automat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Überschrift mit schwarzem Text -->
+<h1 class="page-title">Poker Automat</h1>
+
+<!-- Ausklappbarer Bereich für die Payout-Tabelle -->
+<div class="collapsible-table">
+    <div class="collapsible-header" onclick="toggleTable()">
+        <span class="collapse-icon">▼</span> Payout-Tabelle
+    </div>
+    <table class="payout-table">
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Royal Flush</td>
+                <td>@(1000 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Straight Flush</td>
+                <td>@(500 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Vierling</td>
+                <td>@(200 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Full House</td>
+                <td>@(150 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Flush</td>
+                <td>@(150 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Straight</td>
+                <td>@(100 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Drilling</td>
+                <td>@(30 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Zwei Paare</td>
+                <td>@(20 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Paar</td>
+                <td>@(10 * Model.Stake)</td>
+            </tr>
+            <tr>
+                <td>Cost Per Deal</td>
+                <td>@(10 * Model.Stake)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Kartenanzeige -->
+<div class="cards">
+    @for (int i = 0; i < 5; i++)
+    {
+        string imageName = Model.Cards[i].ToString() + ".png";
+        bool isHeld = Model.heldcards != null && Model.heldcards.Contains(Model.Cards[i]);
+
+        using (Html.BeginForm("HoldCard", "Casino", FormMethod.Post, new { @class = "card-form" }))
+        {
+            <button type="submit" class="card-button @(isHeld ? "selected" : "")"
+                    onclick="toggleSelection(this)"
+                    style="background-image: url('@Url.Content("~/Content/Bilder/" + imageName)');">
+                <span class="sr-only">Hold Card @Model.Cards[i]</span>
+                <input type="hidden" name="card" value="@Model.Cards[i]" />
+            </button>
+        }
+    }
+</div>
+
+<!-- Deal/Hold Formular (zentriert) -->
+<div class="form-wrapper" style="text-align: center; margin-top: 20px;">
+    @using (Html.BeginForm("DisplayCards", "Casino", FormMethod.Get, new { id = "deal-hold-form" }))
+    {
+        <input type="hidden" id="heldCardsInput" name="heldcards" value="@string.Join(",", Model.heldcards ?? new List<string>())" />
+        <input type="submit" name="@Model.ButtonName" value="@Model.ButtonName" class="btn btn-success" />
+    }
+</div>
+
+<!-- Punkteanzeige (zentriert) -->
+<div class="punkte-box-wrapper" style="text-align: center; margin-top: 20px;">
+    <div class="punkte-box">
+        <label for="punkte">Punkte:</label>
+        <input type="text" id="punkte" value="@Model.Punkte" readonly />
+        <label for="multiplier">Multiplier:</label>
+        <input type="text" id="multiplier" value="@Model.Stake" readonly />
+        <label for="Earnings">Earnings:</label>
+        <input type="text" id="ernings" value="@Model.LatestErnings" readonly />
+    </div>
+</div>
+
+<!-- Game Actions (zentriert) -->
+<div class="game-actions" style="text-align: center; margin-top: 20px;">
+    @using (Html.BeginForm("UpStake", "Casino", FormMethod.Post))
+    {
+        <input type="submit" name="▲" value="▲" class="btn btn-primary" style="margin-right: 10px;" />
+    }
+    @using (Html.BeginForm("DownStake", "Casino", FormMethod.Post))
+    {
+        <input type="submit" name="▼" value="▼" class="btn btn-primary" style="margin-left: 10px;" />
+    }
+</div>
+
+<!-- Eigener Button (zurück zu Einstellungen) zentriert -->
+<div class="btn-wrapper">
+    @Html.ActionLink("Zurück zu Einstellungen", "Settings", "Casino", null, new { @class = "btn btn-custom" })
+</div>
+
+<!-- CSS Styles -->
+<style>
+    /* Seitentitel */
+    .page-title {
+        color: black;
+        text-align: center;
+        margin: 20px 0;
+        font-size: 2em;
+    }
+
+    /* Ausklappbarer Bereich */
+    .collapsible-table {
+        width: 100%;
+        margin: 30px auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .collapsible-header {
+        background-color: #f0f0f0;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+        border-radius: 5px 5px 0 0;
+        color: black; /* Titel in schwarz */
+    }
+
+    .collapse-icon {
+        margin-right: 5px;
+    }
+
+    /* Payout-Tabelle */
+    .payout-table {
+        width: 100%;
+        margin: 0;
+        border-collapse: collapse;
+    }
+
+        .payout-table th,
+        .payout-table td {
+            padding: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .payout-table thead {
+            background-color: #f8f8f8;
+        }
+
+    /* Karten */
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .card-button {
+        width: 100px;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        border: 2px solid transparent;
+        cursor: pointer;
+        border-radius: 10px;
+        position: relative;
+        transition: border 0.2s ease-in-out;
+    }
+
+        .card-button.selected {
+            border: 4px solid green;
+        }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    /* Punkte Box */
+    .punkte-box {
+        margin-top: 20px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        background-color: #f8f8f8;
+    }
+
+        .punkte-box input {
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            width: 80px;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+    /* Eigene Formularzentrierung */
+    .form-wrapper form,
+    .game-actions form {
+        display: inline-block;
+    }
+
+    /* Eigener Button (zurück zu Einstellungen) */
+    .btn-wrapper {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn-custom {
+        background-color: #ff9900;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block !important;
+        width: auto !important;
+    }
+
+        .btn-custom:hover {
+            background-color: #e68a00;
+            color: white;
+        }
+</style>
+
+<!-- JavaScript -->
+<script>
+    function toggleTable() {
+        var table = document.querySelector('.collapsible-table .payout-table');
+        var icon = document.querySelector('.collapsible-table .collapse-icon');
+        if (table.style.display === "none") {
+            table.style.display = "table";
+            icon.textContent = "▼";
+            localStorage.setItem("payoutTableExpanded", "true");
+        } else {
+            table.style.display = "none";
+            icon.textContent = "►";
+            localStorage.setItem("payoutTableExpanded", "false");
+        }
+    }
+    // Beim Laden der Seite den gespeicherten Zustand wiederherstellen
+    document.addEventListener("DOMContentLoaded", function () {
+        var table = document.querySelector('.collapsible-table .payout-table');
+        var icon = document.querySelector('.collapsible-table .collapse-icon');
+        var expanded = localStorage.getItem("payoutTableExpanded");
+        if (expanded === "false") {
+            table.style.display = "none";
+            icon.textContent = "►";
+        } else {
+            table.style.display = "table";
+            icon.textContent = "▼";
+        }
+    });
+
+    function toggleSelection(button) {
+        button.classList.toggle("selected");
+    }
+</script>

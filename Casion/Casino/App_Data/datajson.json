@@ -1,0 +1,27 @@
+{
+  "$type": "DataLayer.JSON.Data, DataLayer.JSON",
+  "Version": "1.0.1a",
+  "Persons": [
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "1",
+      "Password": "LXT8lpz39Id0b+GfymTchBXYCA2Mht1nESsIc3fgU04=",
+      "Points": 0,
+      "Salt": "DYemsEm2OzqnowOtr1j4Ig=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "Oliver",
+      "Password": "0dJytb6xohygwVy4D5FW/L10BHPkgs6Bmee1uKqMv38=",
+      "Points": 0,
+      "Salt": "xecwxaRL0CkfGXKYOM36ig=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "Fabian",
+      "Password": "CPFdKMEfAuoEOZlgcB5V2v0KHceI1rP8sSpY3Y3ev+4=",
+      "Points": 0,
+      "Salt": "RAxT7G8Y/K6LqvczBt4B1g=="
+    }
+  ]
+}

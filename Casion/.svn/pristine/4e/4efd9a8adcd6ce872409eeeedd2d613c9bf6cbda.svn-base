@@ -1,0 +1,69 @@
+{
+  "$type": "DataLayer.JSON.Data, DataLayer.JSON",
+  "Version": "1.0.1a",
+  "Persons": [
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "1",
+      "Password": "LXT8lpz39Id0b+GfymTchBXYCA2Mht1nESsIc3fgU04=",
+      "Points": 110,
+      "Salt": "DYemsEm2OzqnowOtr1j4Ig=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "Oliver",
+      "Password": "0dJytb6xohygwVy4D5FW/L10BHPkgs6Bmee1uKqMv38=",
+      "Points": 0,
+      "Salt": "xecwxaRL0CkfGXKYOM36ig=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "Fabian",
+      "Password": "CPFdKMEfAuoEOZlgcB5V2v0KHceI1rP8sSpY3Y3ev+4=",
+      "Points": 0,
+      "Salt": "RAxT7G8Y/K6LqvczBt4B1g=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "tenzin",
+      "Password": "t5d9ghNOGwJdRXlOkIoiC89jPHUyRPLLZVdxycNAy6E=",
+      "Points": 0,
+      "Salt": "Nc63A44drCSqOEoZ+4q0sA=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "Admin",
+      "Password": "CocNQN0kpRUFcC5AwgezRhg8cL6ytRswksgkXGwPpio=",
+      "Points": 0,
+      "Salt": "ddgFLc61gVTdliM/7TJEYg=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "11",
+      "Password": "o4gLGnCX9kny+5dScTTtMMS4/HC7sacMEZCeVUY3fZY=",
+      "Points": 790,
+      "Salt": "IhZVkXEHUPQpF5WWlR/Gmg=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "w",
+      "Password": "BRZndNIEo3vSrjqqcmzcfpIN50gIob8YUSX03HYCbFY=",
+      "Points": 0,
+      "Salt": "vBbBjZn6Vsiybr3uG9kmVg=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "Fabia",
+      "Password": "xTNHuGL4ePBdgIkO5D2qPjPtudiMp1ygQzAEX09O7b8=",
+      "Points": 0,
+      "Salt": "BLILZQNH8B/fj41zw/NfmA=="
+    },
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": "Erdem",
+      "Password": "0Vlx1toqnjXbFo99Oa5RlqIccj3BRcnV17OIaLqa5kg=",
+      "Points": 120,
+      "Salt": "wgCY7kABItfs2srnHD+q5Q=="
+    }
+  ]
+}

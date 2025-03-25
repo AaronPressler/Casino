@@ -1,0 +1,242 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\App_Data\\data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Casino\\App_Data\\data.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\casino\\controllers\\casinocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:casino\\controllers\\casinocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65CF11A0-1C78-4D2B-80D8-7C2032EA5806}|Game.Logik\\Game.Logik.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\game.logik\\gamelogik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65CF11A0-1C78-4D2B-80D8-7C2032EA5806}|Game.Logik\\Game.Logik.csproj|solutionrelative:game.logik\\gamelogik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F785BE0F-B18F-48D1-957F-951CCD0BB270}|DataLayer\\DataLayer.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\datalayer\\mydatalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F785BE0F-B18F-48D1-957F-951CCD0BB270}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\mydatalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBAF76F-2E43-4E75-979E-367C11BC62E2}|DataLayer.JSON\\DataLayer.JSON.csproj|c:\\users\\koehl\\desktop\\schule\\sew\\3ahitn\\casino\\datalayer.json\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBAF76F-2E43-4E75-979E-367C11BC62E2}|DataLayer.JSON\\DataLayer.JSON.csproj|solutionrelative:datalayer.json\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A77ACBEE-4A99-4A13-B862-F4522230CB16}|Domain\\Domain.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\domain\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A77ACBEE-4A99-4A13-B862-F4522230CB16}|Domain\\Domain.csproj|solutionrelative:domain\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C76948-B5C4-43D7-89F1-EFA3CDCBA97A}|LeaderBoardEntry\\Models.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\leaderboardentry\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C76948-B5C4-43D7-89F1-EFA3CDCBA97A}|LeaderBoardEntry\\Models.csproj|solutionrelative:leaderboardentry\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\casino\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:casino\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\casino\\views\\casino\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:casino\\views\\casino\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C76948-B5C4-43D7-89F1-EFA3CDCBA97A}|LeaderBoardEntry\\Models.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\leaderboardentry\\leaderboardentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C76948-B5C4-43D7-89F1-EFA3CDCBA97A}|LeaderBoardEntry\\Models.csproj|solutionrelative:leaderboardentry\\leaderboardentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\casino\\models\\pokermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:casino\\models\\pokermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\casino\\models\\sessionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:casino\\models\\sessionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\casino\\views\\casino\\poker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:casino\\views\\casino\\poker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CasinoController.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Controllers\\CasinoController.cs",
+              "RelativeDocumentMoniker": "Casino\\Controllers\\CasinoController.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Controllers\\CasinoController.cs",
+              "RelativeToolTip": "Casino\\Controllers\\CasinoController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAADgv0UAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:29:44.773Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "data.json",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\App_Data\\data.json",
+              "RelativeDocumentMoniker": "Casino\\App_Data\\data.json",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\App_Data\\data.json",
+              "RelativeToolTip": "Casino\\App_Data\\data.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-14T13:12:34.144Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataLayer.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\DataLayer.JSON\\DataLayer.cs",
+              "RelativeDocumentMoniker": "DataLayer.JSON\\DataLayer.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\DataLayer.JSON\\DataLayer.cs",
+              "RelativeToolTip": "DataLayer.JSON\\DataLayer.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAtwFgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T18:20:25.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyDataLayer.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\DataLayer\\MyDataLayer.cs",
+              "RelativeDocumentMoniker": "DataLayer\\MyDataLayer.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\DataLayer\\MyDataLayer.cs",
+              "RelativeToolTip": "DataLayer\\MyDataLayer.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAtwCgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:31:23.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Gamelogik.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Game.Logik\\Gamelogik.cs",
+              "RelativeDocumentMoniker": "Game.Logik\\Gamelogik.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Game.Logik\\Gamelogik.cs",
+              "RelativeToolTip": "Game.Logik\\Gamelogik.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAIAwwKMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:06:54.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DataLayer.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Domain\\DataLayer.cs",
+              "RelativeDocumentMoniker": "Domain\\DataLayer.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Domain\\DataLayer.cs",
+              "RelativeToolTip": "Domain\\DataLayer.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAApwAwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:36:33.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LeaderboardEntry.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\LeaderBoardEntry\\LeaderboardEntry.cs",
+              "RelativeDocumentMoniker": "LeaderBoardEntry\\LeaderboardEntry.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\LeaderBoardEntry\\LeaderboardEntry.cs",
+              "RelativeToolTip": "LeaderBoardEntry\\LeaderboardEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:08:23.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\LeaderBoardEntry\\LoginModel.cs",
+              "RelativeDocumentMoniker": "LeaderBoardEntry\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\LeaderBoardEntry\\LoginModel.cs",
+              "RelativeToolTip": "LeaderBoardEntry\\LoginModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:41:39.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Casino\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Models\\LoginModel.cs",
+              "RelativeToolTip": "Casino\\Models\\LoginModel.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:24:06.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Views\\Casino\\Login.cshtml",
+              "RelativeDocumentMoniker": "Casino\\Views\\Casino\\Login.cshtml",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Views\\Casino\\Login.cshtml",
+              "RelativeToolTip": "Casino\\Views\\Casino\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T13:25:53.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PokerModel.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Models\\PokerModel.cs",
+              "RelativeDocumentMoniker": "Casino\\Models\\PokerModel.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Models\\PokerModel.cs",
+              "RelativeToolTip": "Casino\\Models\\PokerModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA0wBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T11:42:39.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SessionModel.cs",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Models\\SessionModel.cs",
+              "RelativeDocumentMoniker": "Casino\\Models\\SessionModel.cs",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Models\\SessionModel.cs",
+              "RelativeToolTip": "Casino\\Models\\SessionModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T11:45:18.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Poker.cshtml",
+              "DocumentMoniker": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Views\\Casino\\Poker.cshtml",
+              "RelativeDocumentMoniker": "Casino\\Views\\Casino\\Poker.cshtml",
+              "ToolTip": "C:\\Users\\koehl\\Desktop\\Schule\\SEW\\3aHITN\\Casino\\Casino\\Views\\Casino\\Poker.cshtml",
+              "RelativeToolTip": "Casino\\Views\\Casino\\Poker.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T12:06:48.458Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

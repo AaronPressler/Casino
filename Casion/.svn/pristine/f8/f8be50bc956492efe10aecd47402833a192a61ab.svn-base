@@ -1,0 +1,82 @@
+﻿using Domain;
+using System;
+using System.Configuration;
+using System.Collections.Generic;
+using System.Text;
+using System.Data.SqlClient;
+
+
+namespace DataLayerSQL
+{
+
+    internal class DataLayer : IDataLayer
+    {
+        private readonly string _connectionString;
+
+        public DataLayer()
+        {
+            _connectionString = ConfigurationManager.ConnectionStrings[""].ConnectionString;
+        }
+
+        public List<Player> LoadPersons()
+        {
+            var players = new List<Player>();
+
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand("SELECT Id, Name FROM Players", conn))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var player = new Player
+                            {
+                                id = reader.GetGuid(0),
+                                UserName = reader.GetString(1),
+                                Password = reader.GetString(2),
+                                Points = reader.GetInt32(3),
+                                Salt = reader.GetString(4),
+                            };
+                            players.Add(player);
+                        }
+                    }
+                }
+            }
+            return players;
+        }
+
+        public void SavePersons(List<Player> players)
+        {
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (var deleteCmd = new SqlCommand("DELETE FROM Players", conn))
+                {
+                    deleteCmd.ExecuteNonQuery();
+                }
+
+                foreach (var player in players)
+                {
+                    using (var insertCmd = new SqlCommand("INSERT INTO Players (Id, UserName,Password,Salt) VALUES (@Id, @Name, @Password, @Points, @Salt)", conn))
+                    {
+                        insertCmd.Parameters.AddWithValue("@Id", player.id);
+                        insertCmd.Parameters.AddWithValue("@UserName", player.UserName);
+                        insertCmd.Parameters.AddWithValue("@Password", player.Password);
+                        insertCmd.Parameters.AddWithValue("@Points", player.Points);
+                        insertCmd.Parameters.AddWithValue("@Salt", player.Salt);
+                        insertCmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        public string GetUTF8(string player)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(player);
+            return BitConverter.ToString(bytes).Replace("-", "");
+        }
+    }
+
+}

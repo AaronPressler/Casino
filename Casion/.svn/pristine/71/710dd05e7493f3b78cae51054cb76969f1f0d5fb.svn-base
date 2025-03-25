@@ -1,0 +1,135 @@
+﻿@model Casino.Models.PokerModel
+@{
+    ViewBag.Title = "Poker Game - Leaderboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="payout-table">
+    <thead>
+        <tr>
+            <th>Player Name</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var entry in Model.LeaderBoard)
+        {
+            <tr>
+                <td>@entry.PlayerName</td>
+                <td>@entry.Score</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<div class="cards">
+    @for (int i = 0; i < 5; i++)
+    {
+        string imageName = Model.Cards[i].ToString() + ".png";
+
+        <button type="button" class="card-button"
+                onclick="toggleSelection(this, '@Model.Cards[i]')"
+                style="background-image: url('@Url.Content("~/Content/Bilder/" + imageName)');">
+            <span class="sr-only">Hold Card @Model.Cards[i]</span>
+        </button>
+    }
+</div>
+
+<style>
+    .card-button {
+        width: 100px;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        border: 2px solid transparent; /* Standard ohne Rahmen */
+        cursor: pointer;
+        transition: border 0.2s ease-in-out;
+    }
+
+        .card-button.selected {
+            border: 4px solid green; /* Grüner Rahmen wenn ausgewählt */
+        }
+</style>
+
+<script>
+    function toggleSelection(button, cardName) {
+        button.classList.toggle("selected");
+
+        // Sende den Karten-Namen an den Server, um ihn in @Model.heldcards zu speichern
+        fetch('@Url.Action("AddHeldCard", "Casino")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ card: cardName })
+        }).then(response => {
+            if (!response.ok) {
+                console.error("Fehler beim Speichern der Karte.");
+            }
+        });
+    }
+</script>
+
+
+
+
+
+<!-- Draw/Deal Formular mit Übergabe der gehaltenen Karten -->
+@using (Html.BeginForm("DisplayCards", "Casino", FormMethod.Get, new { id = "deal-hold-form" }))
+{
+    <input type="hidden" id="heldCardsInput" name="heldcards" value="@string.Join(",", Model.heldcards ?? new List<string>())" />
+    <input type="submit" name="@Model.ButtonName" value="@Model.ButtonName" class="btn btn-success" />
+}
+
+<div class="game-actions">
+    @using (Html.BeginForm("UpStake", "Casino", FormMethod.Post))
+    {
+        <input type="submit" name="▲" value="▲" class="btn btn-primary" />
+    }
+    @using (Html.BeginForm("DownStake", "Casino", FormMethod.Post))
+    {
+        <input type="submit" name="▼" value="▼" class="btn btn-primary" />
+    }
+</div>
+
+<style>
+    .cards {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .card-button {
+        width: 100px;
+        height: 140px;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        position: relative;
+        transition: border 0.2s ease-in-out;
+    }
+
+        .card-button.selected {
+            border: 4px solid green; /* Grüner Rahmen wenn ausgewählt */
+        }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+</style>
+
+
+
+
+

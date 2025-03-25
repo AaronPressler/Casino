@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "Players":
+  [
+    {
+      "UserName": "1",
+      "Password": "1",
+      "Age": 20,
+      "Points": 10500
+    },
+    {
+      "UserName": "11",
+      "Password": "11",
+      "Age": 20,
+      "Points": 1000000
+    }
+  ]
+}

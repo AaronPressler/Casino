@@ -1,0 +1,284 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Web.Mvc;
+using Casino.Models;
+using Newtonsoft.Json;
+using System.Web;
+using System.Linq;
+using Cards;
+using System.Diagnostics;
+using Game.Logik;
+using System.Web.SessionState;
+
+namespace Casino.Controllers
+{
+    public class CasinoController : Controller
+    {
+        public Stack<string> cardstack;
+        public string[] aktivecards = new string[5];
+        public List<string> pausedcards = new List<string>();
+        public static int stake = 1;
+        Gamelogik g = new Gamelogik();
+
+
+
+        #region publicMethoden
+        public List<LeaderBoardEntry.LoginModel> Coverttolist(List<LoginModel> list)
+        {
+           
+            List<LeaderBoardEntry.LoginModel> list2 = new List<LeaderBoardEntry.LoginModel>();
+            foreach (var item in list)
+            {
+                list2.Add((LeaderBoardEntry.LoginModel)item);
+            }
+            return list2;
+        }
+        public List<LoginModel> GetList()
+        {
+            List<LoginModel> list = new List<LoginModel>();
+            List<LeaderBoardEntry.LoginModel> list2 = g.GetUsers();
+            foreach (var item in list2)
+            {
+                list.Add((LoginModel)item);
+            }
+            return list;
+        }
+
+        #endregion
+
+        #region Register
+
+        [HttpPost]
+        public ActionResult Register(LoginModel model)
+        {
+            bool isnew = true;
+            List<LoginModel> list = GetList();
+            if (ModelState.IsValid)
+            {
+                foreach (var item in list)
+                {
+                    if (item.UserName == model.UserName)
+                    {
+                        isnew = false;
+                    }
+
+
+                }
+                if (isnew)
+                {
+                    g. AddNewUser(Coverttolist(list),(LeaderBoardEntry.LoginModel)model);
+                    return View("Login");
+                }
+
+            }
+            return View(model);
+        }
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        #endregion
+
+        #region Login
+        [HttpPost]
+        public ActionResult Login(LoginModel user)
+        {
+            List<LoginModel> list = GetList();
+            string pw = user.Password;
+            string username = user.UserName;
+            string salt = g.GetSalt(username);
+            
+           
+
+            foreach (var item in list)
+            {
+                if (username == item.UserName)
+                {
+                    if (Gamelogik.VerifyPassword(user.Password,salt,item.Password))
+                    {
+                        return View("Settings");
+                    }
+                    
+                }
+            }
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+
+            return View();
+        }
+        #endregion
+
+        #region Main Webseite
+        /*
+        [HttpPost]
+        public ActionResult HoldCard(PokerCard pc)
+        {
+            aktivecards.Append(pc.Card);
+            return View("Poker");
+        }
+
+        public ActionResult GiveoutCards() 
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                aktivecards[i] = cardstack.Peek();
+                cardstack.Pop();
+            }
+            return View("Poker");
+        }
+
+        public ActionResult ChangeCards() 
+        {
+            
+            for (int i = 0; i < pausedcards.Count(); i++) 
+                aktivecards[i] = pausedcards[i];
+
+            for (int i = pausedcards.Count(); i < 5; i++)
+            {
+                aktivecards[i] = cardstack.Peek();
+                cardstack.Pop();
+            }
+            Model.poker = new PokerModel();
+            Card cards = new Card();
+
+            List<LoginModel> list = g.GetUsers();
+
+            foreach (var item in list)
+                if (item.UserName == Session["Username"])
+                    Model.poker.Punkte = item.Points;
+
+            Model.poker.LeaderBoard = g.FillLeaderBoard();
+            Model.poker.Cards = aktivecards;
+            Model.poker.Stake = stake;
+            return View("Poker");
+        }
+        
+        public ActionResult UpStake() {
+            
+            stake++;
+            Model.poker = new PokerModel();
+            Card cards = new Card();
+
+            List<LoginModel> list = g.GetUsers();
+
+            foreach (var item in list)
+                if (item.UserName == Session["Username"])
+                    Model.poker.Punkte = item.Points;
+
+            Model.poker.LeaderBoard = g.FillLeaderBoard();
+            Model.poker.Cards = aktivecards;
+            Model.poker.Stake = stake;
+            return View("Poker");
+        }
+
+
+        public ActionResult DownStake()
+        {
+            stake--;
+            Model.poker = new PokerModel();
+            Card cards = new Card();
+
+            List<RegisterModel> list = ConverToRegisterModel(g.GetUsers());
+
+            foreach (var item in list)
+                if (item.UserName == Session["Username"])
+                    Model.poker.Punkte = item.Points;
+
+            Model.poker.LeaderBoard = g.FillLeaderBoard();
+            Model.poker.Cards = aktivecards;
+            Model.poker.Stake = stake;
+            
+
+
+            return View("Poker",Model.poker);
+        }
+
+        public ActionResult Settings(RegisterModel model)
+        {
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Points() { return View(); }
+
+
+        [HttpPost]
+        public ActionResult Points(RegisterModel model)
+        {
+            List<RegisterModel> list = ConverToRegisterModel(g.GetUsers());
+
+            foreach (var item in list)
+            {
+                if (item.UserName == Session["UserName"])
+                {
+                    item.Points += model.Points;
+                    break;
+                }
+            }
+
+
+           
+
+            ViewBag.Message = "Punkte wurden erfolgreich hinzugefügt!";
+
+            return View("Settings", model);
+        }
+
+        [HttpPost]
+        public ActionResult Poker()
+        {
+            Model.poker = new PokerModel();
+            Card cards = new Card();
+
+            List<RegisterModel> list = ConverToRegisterModel(g.GetUsers());
+            cardstack = cards.ReturnStack();
+
+            for (int i = 0; i < 5; i++)
+            {
+                aktivecards[i] = cardstack.Peek();
+                cardstack.Pop();
+            }
+            Model.poker.Cards = aktivecards;
+            
+            
+
+            foreach (var item in list)
+                if (item.UserName == Session["Username"])
+                    Model.poker.Punkte = item.Points;
+
+            Model.poker.LeaderBoard = g.FillLeaderBoard();
+
+
+            return View(Model.poker);
+        }
+        */
+        
+
+        #endregion
+
+        protected SessionModel Model
+        {
+            get
+            {
+                SessionModel result = Session["PokerModel"] as SessionModel;
+
+
+
+
+                if (result == null)
+                {
+                    result = new SessionModel();
+                    Session.Add("PokerModel", result);
+                }
+                return result;
+            }
+        }
+
+    }
+}

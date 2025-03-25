@@ -1,0 +1,12 @@
+{
+  "$type": "DataLayer.JSON.Data, DataLayer.JSON",
+  "Version": "1.0.1a",
+  "Persons": [
+    {
+      "$type": "Domain.Player, Domain",
+      "UserName": null,
+      "Password": null,
+      "Points": 0
+    }
+  ]
+}

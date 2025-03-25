@@ -1,0 +1,22 @@
+﻿@model Casino.Models.LoginModel
+@{
+    ViewBag.Title = "Punkte hinzufügen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Punkte hinzufügen</h2>
+<div class="form-container">
+    @using (Html.BeginForm("Points", "Casino", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Points)
+            @Html.TextBoxFor(m => m.Points, new { @class = "form-control", @placeholder = "Punkte eingeben" })
+            @Html.ValidationMessageFor(m => m.Points, "", new { @class = "validation-message" })
+        </div>
+        <input type="submit" name="addpoints" value="Add Points" class="btn btn-primary" />
+    }
+    @Html.ActionLink("Zurück zu Einstellungen", "Settings", "Casino", null, new { @class = "btn btn-success" })
+</div>
+
+
+
