@@ -75,6 +75,45 @@ namespace DataLayer.SQL
             }
             _connection.Close();
         }
+        public void UpdatePoints(Player person)
+        {
+            try
+            {
+                // Verbindung schließen, falls sie noch offen ist
+                if (_connection.State != System.Data.ConnectionState.Closed)
+                    _connection.Close();
+
+                string query = @"
+            UPDATE user
+            SET Points = @Points
+            WHERE id = @id;
+        ";
+
+                _connection.Open();
+
+                using (var command = new MySqlCommand(query, _connection))
+                {
+                    // Nur die Punkte und die ID als Parameter zuweisen
+                    command.Parameters.AddWithValue("@Points", person.Points);
+                    command.Parameters.AddWithValue("@id", person.id.ToString());
+
+                    // Query ausführen
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Fehlerbehandlung: z.B. Log-Ausgabe
+                Console.WriteLine("Fehler beim Aktualisieren der Punkte: " + ex.Message);
+            }
+            finally
+            {
+                // Verbindung immer wieder schließen
+                if (_connection.State != System.Data.ConnectionState.Closed)
+                    _connection.Close();
+            }
+        }
+
 
         public string GetUTF8(string player)
         {

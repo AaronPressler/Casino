@@ -31,6 +31,10 @@ namespace DataLayer.XML
             }
         }
 
+        public void UpdatePoints(Player person) 
+        {
+        
+        }
         private List<Player> LoadData()
         {
             Data data = null;

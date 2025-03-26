@@ -19,7 +19,7 @@ namespace DataLayer.JSON
             _filename = ConfigurationManager.AppSettings["JSONDataPath"];
             _serializerSettings = new JsonSerializerSettings()
             {
-                //hallo aaron
+                
                 TypeNameHandling = TypeNameHandling.Objects,
                 TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Simple
             };
@@ -36,6 +36,10 @@ namespace DataLayer.JSON
                 byte[] bytes = Encoding.UTF8.GetBytes(jsonString);
                 s.Write(bytes, 0, bytes.Length);
             }
+        }
+        public void UpdatePoints(Player person)
+        {
+
         }
         private List<Player> LoadData()
         {

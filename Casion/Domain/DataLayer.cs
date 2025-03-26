@@ -12,6 +12,7 @@ namespace Domain
 
         void SavePersons(List<Player> persons);
 
+        void UpdatePoints(Player person);
 
         string GetUTF8(string person);   
 

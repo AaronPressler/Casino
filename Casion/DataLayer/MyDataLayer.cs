@@ -46,6 +46,10 @@ namespace DataLayer
         {
             _dataLayer.SavePersons(persons);
         }
+        public void UpdatePoints(Player person)
+        {
+            _dataLayer.UpdatePoints(person);
+        }
 
         public string GetUTF8(string player) 
         {

@@ -53,3 +53,14 @@ C:\Users\aaron\OneDrive\Dokumente\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\D
 C:\Users\aaron\OneDrive\Dokumente\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\DataLaye.681D31C9.Up2Date
 C:\Users\aaron\OneDrive\Dokumente\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\DataLayer.XML.dll
 C:\Users\aaron\OneDrive\Dokumente\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\DataLayer.XML.pdb
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\bin\Debug\DataLayer.XML.dll
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\bin\Debug\DataLayer.XML.pdb
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\bin\Debug\Domain.dll
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\bin\Debug\Newtonsoft.Json.dll
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\bin\Debug\Domain.pdb
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\bin\Debug\Newtonsoft.Json.xml
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\DataLayer.XML.csproj.AssemblyReference.cache
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\DataLayer.XML.csproj.CoreCompileInputs.cache
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\DataLaye.681D31C9.Up2Date
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\DataLayer.XML.dll
+C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.XML\obj\Debug\DataLayer.XML.pdb
