@@ -48,7 +48,7 @@ namespace DataLayer
         }
         public void UpdatePoints(Player person)
         {
-            _dataLayer.UpdatePoints(person);
+            //_dataLayer.UpdatePoints(person);
         }
 
         public string GetUTF8(string player) 

@@ -10,11 +10,14 @@ using Cards;
 using System.Diagnostics;
 using Game.Logik;
 using System.Web.SessionState;
+using MySql.Data.MySqlClient;
 
 namespace Casino.Controllers
 {
     public class CasinoController : Controller
     {
+        MySqlConnection _connection = new MySqlConnection();
+
         public Stack<string> cardstack;
         public string[] aktivecards = new string[5];
         public List<string> pausedcards = new List<string>();
@@ -139,7 +142,15 @@ namespace Casino.Controllers
 
         public ActionResult Clear() 
         {
-            //Clear code
+            if (_connection.State != System.Data.ConnectionState.Closed)
+                _connection.Close();
+
+            _connection = new MySqlConnection("Server=62.178.173.135;Port=3306;Database=sew3_web_games;User ID=sew_db;Password=SewPassword123!;SslMode=none;;AllowPublicKeyRetrieval=True;");
+            string query = "DELETE FROM user";
+            _connection.Open();
+            MySqlCommand cmd = new MySqlCommand(query, _connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            _connection.Close();
 
             return View("Login");
         }

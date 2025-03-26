@@ -64,3 +64,14 @@ C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.JSON\obj\Debug\DataLayer
 C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.JSON\obj\Debug\DataLaye.30460180.Up2Date
 C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.JSON\obj\Debug\DataLayer.JSON.dll
 C:\Users\koehl\Documents\GitHub\Casino\Casion\DataLayer.JSON\obj\Debug\DataLayer.JSON.pdb
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\bin\Debug\DataLayer.JSON.dll
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\bin\Debug\DataLayer.JSON.pdb
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\bin\Debug\Domain.dll
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\bin\Debug\Domain.pdb
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\obj\Debug\DataLayer.JSON.csproj.AssemblyReference.cache
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\obj\Debug\DataLayer.JSON.csproj.CoreCompileInputs.cache
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\obj\Debug\DataLaye.30460180.Up2Date
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\obj\Debug\DataLayer.JSON.dll
+C:\Users\aaron\Documents\GitHub\WebGames\Casion\DataLayer.JSON\obj\Debug\DataLayer.JSON.pdb

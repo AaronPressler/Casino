@@ -18,7 +18,7 @@ namespace Domain
 
         public Player()
         {
-            id = Guid.NewGuid();
+
         }
     }
 }

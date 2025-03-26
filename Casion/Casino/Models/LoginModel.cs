@@ -26,6 +26,7 @@ namespace Casino.Models
 
         public string Salt { get; set; }
 
+        public Guid id { get; set; }
 
 
         public static explicit operator LeaderBoardEntry.LoginModel(LoginModel m)

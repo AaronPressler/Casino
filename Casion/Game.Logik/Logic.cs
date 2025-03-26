@@ -156,6 +156,8 @@ namespace Game.Logik
                 model.Password = GetHashed(model.Password, out salt);
                 model.Salt = salt;
                 list.Add(model);
+                model.id = Guid.NewGuid();
+                
             }
             dl.SavePersons(ConvertToPlayerList(list));
         }
