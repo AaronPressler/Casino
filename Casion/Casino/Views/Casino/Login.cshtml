@@ -25,4 +25,8 @@
     {
         <input type="submit" name="register" value="Register" class="btn btn-success" />
     }
+    @using (Html.BeginForm("Clear", "Casino", FormMethod.Post))
+    {
+      <input type="submit" name="Clear" value="Clear" class="btn btn-success" />
+    }
 </div>

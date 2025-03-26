@@ -137,6 +137,13 @@ namespace Casino.Controllers
             return View("Login");
         }
 
+        public ActionResult Clear() 
+        {
+            //Clear code
+
+            return View("Login");
+        }
+
         [HttpPost]
         public ActionResult Points(LoginModel model)
         {

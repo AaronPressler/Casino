@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Controllers\\CasinoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:Casino\\Controllers\\CasinoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|c:\\users\\koehl\\documents\\github\\casino\\casion\\casino\\views\\casino\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:casino\\views\\casino\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Views\\Casino\\Poker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:Casino\\Views\\Casino\\Poker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|c:\\users\\koehl\\documents\\github\\casino\\casion\\casino\\controllers\\casinocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:casino\\controllers\\casinocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F785BE0F-B18F-48D1-957F-951CCD0BB270}|DataLayer\\DataLayer.csproj|C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\datalayer\\mydatalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F785BE0F-B18F-48D1-957F-951CCD0BB270}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\mydatalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83BAA174-EF2F-426B-91A5-211FE8CF155B}|DataLayerSQL\\DataLayer.SQL.csproj|c:\\users\\koehl\\documents\\github\\casino\\casion\\datalayersql\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83BAA174-EF2F-426B-91A5-211FE8CF155B}|DataLayerSQL\\DataLayer.SQL.csproj|C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\datalayersql\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83BAA174-EF2F-426B-91A5-211FE8CF155B}|DataLayerSQL\\DataLayer.SQL.csproj|solutionrelative:datalayersql\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{0FBAF76F-2E43-4E75-979E-367C11BC62E2}|DataLayer.JSON\\DataLayer.JSON.csproj|solutionrelative:datalayer.json\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{475270E7-0E41-4483-BDA9-6D49B3B0F0D4}|DataLayer.XML\\DataLayer.XML.csproj|c:\\users\\koehl\\documents\\github\\casino\\casion\\datalayer.xml\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{475270E7-0E41-4483-BDA9-6D49B3B0F0D4}|DataLayer.XML\\DataLayer.XML.csproj|C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\datalayer.xml\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{475270E7-0E41-4483-BDA9-6D49B3B0F0D4}|DataLayer.XML\\DataLayer.XML.csproj|solutionrelative:datalayer.xml\\datalayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{65CF11A0-1C78-4D2B-80D8-7C2032EA5806}|Game.Logik\\Game.Logic.csproj|C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\game.logik\\logic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65CF11A0-1C78-4D2B-80D8-7C2032EA5806}|Game.Logik\\Game.Logic.csproj|solutionrelative:game.logik\\logic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Views\\Casino\\Poker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{627EE9B4-9863-4437-8ECE-D66E169BA984}|Casino\\Casino.csproj|solutionrelative:Casino\\Views\\Casino\\Poker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Casino||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -77,17 +81,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CasinoController.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Controllers\\CasinoController.cs",
               "RelativeDocumentMoniker": "Casino\\Controllers\\CasinoController.cs",
               "ToolTip": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Controllers\\CasinoController.cs",
               "RelativeToolTip": "Casino\\Controllers\\CasinoController.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAkwJ4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAqwIsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T21:29:44.773Z",
               "IsPinned": true,
@@ -95,20 +99,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Poker.cshtml",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Views\\Casino\\Poker.cshtml",
               "RelativeDocumentMoniker": "Casino\\Views\\Casino\\Poker.cshtml",
               "ToolTip": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Views\\Casino\\Poker.cshtml",
               "RelativeToolTip": "Casino\\Views\\Casino\\Poker.cshtml",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAwGcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAIwGcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-14T12:06:48.458Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SessionModel.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Models\\SessionModel.cs",
               "RelativeDocumentMoniker": "Casino\\Models\\SessionModel.cs",
@@ -117,12 +122,11 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T11:45:18.323Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "DataLayer.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\DataLayerSQL\\DataLayer.cs",
               "RelativeDocumentMoniker": "DataLayerSQL\\DataLayer.cs",
@@ -131,7 +135,19 @@
               "ViewState": "AgIAAD8AAAAAAAAAAAAqwE0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T11:55:41.559Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Views\\Casino\\Login.cshtml",
+              "RelativeDocumentMoniker": "Casino\\Views\\Casino\\Login.cshtml",
+              "ToolTip": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Views\\Casino\\Login.cshtml",
+              "RelativeToolTip": "Casino\\Views\\Casino\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T10:03:08.656Z",
               "EditorCaption": ""
             },
             {
@@ -140,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MyDataLayer.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\DataLayer\\MyDataLayer.cs",
               "RelativeDocumentMoniker": "DataLayer\\MyDataLayer.cs",
@@ -148,12 +164,11 @@
               "RelativeToolTip": "DataLayer\\MyDataLayer.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAYwCMAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T12:12:11.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T12:12:11.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DataLayer.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\DataLayer.JSON\\DataLayer.cs",
               "RelativeDocumentMoniker": "DataLayer.JSON\\DataLayer.cs",
@@ -161,12 +176,11 @@
               "RelativeToolTip": "DataLayer.JSON\\DataLayer.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwCoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T13:28:37.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T13:28:37.1Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "DataLayer.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\DataLayer.XML\\DataLayer.cs",
               "RelativeDocumentMoniker": "DataLayer.XML\\DataLayer.cs",
@@ -174,12 +188,11 @@
               "RelativeToolTip": "DataLayer.XML\\DataLayer.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:02:15.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T08:02:15.414Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "DataLayer.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Domain\\DataLayer.cs",
               "RelativeDocumentMoniker": "Domain\\DataLayer.cs",
@@ -187,12 +200,11 @@
               "RelativeToolTip": "Domain\\DataLayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T13:29:53.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T13:29:53.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Logic.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Game.Logik\\Logic.cs",
               "RelativeDocumentMoniker": "Game.Logik\\Logic.cs",
@@ -200,12 +212,11 @@
               "RelativeToolTip": "Game.Logik\\Logic.cs",
               "ViewState": "AgIAAI8AAAAAAAAAAAAwwKMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T12:30:57.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T12:30:57.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Data.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\DataLayer.JSON\\Data.cs",
               "RelativeDocumentMoniker": "DataLayer.JSON\\Data.cs",
@@ -217,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Domain\\Player.cs",
               "RelativeDocumentMoniker": "Domain\\Player.cs",
@@ -229,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Settings.cshtml",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Views\\Casino\\Settings.cshtml",
               "RelativeDocumentMoniker": "Casino\\Views\\Casino\\Settings.cshtml",
@@ -241,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "data.json",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\App_Data\\data.json",
               "RelativeDocumentMoniker": "Casino\\App_Data\\data.json",
@@ -253,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Points.cshtml",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Views\\Casino\\Points.cshtml",
               "RelativeDocumentMoniker": "Casino\\Views\\Casino\\Points.cshtml",
@@ -265,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Casino",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Casino.csproj",
               "RelativeDocumentMoniker": "Casino\\Casino.csproj",
@@ -276,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Casino\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "Casino\\Models\\LoginModel.cs",
@@ -288,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\koehl\\Documents\\GitHub\\Casino\\Casion\\Cards\\Card.cs",
               "RelativeDocumentMoniker": "Cards\\Card.cs",
