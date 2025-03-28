@@ -30,13 +30,14 @@ namespace DataLayer.SQL
             {
                 dbList.Add(new Player
                 {
-                    UserName = reader["Username"] as string,
-                    Points = Convert.ToInt32(reader["Points"] as string),
-                    Password = reader["password_hash"] as string,
-                    Salt = reader["salt"] as string,
-                    id = Guid.Parse(reader["id"] as string),
+                    UserName = reader["Username"].ToString(),
+                    Points = Convert.ToInt32(reader["Points"]),
+                    Password = reader["password_hash"].ToString(),
+                    Salt = reader["salt"].ToString(),
+                    id = Guid.Parse(reader["id"].ToString()),
                 });
             }
+
             _connection.Close();
             return dbList;
         }
@@ -44,7 +45,14 @@ namespace DataLayer.SQL
         public void SavePersons(List<Player> players)
         {
             foreach (Player p in players)
+            {
+                if (p.id.ToString()[0] == '0')
+                {
+                    p.CreatANewId();
+                }
                 SaveData(p);
+            }
+
         }
         public void SaveData(Player person)
         {

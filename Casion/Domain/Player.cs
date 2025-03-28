@@ -16,6 +16,10 @@ namespace Domain
         public int Points { get; set; }
         public string Salt{ get; set; }
 
+        public void CreatANewId() 
+        {
+            id = Guid.NewGuid();
+        }
         public Player()
         {
 

@@ -28,3 +28,9 @@ C:\Users\aaron\Documents\GitHub\WebGames\Casion\Domain\obj\Debug\Domain.csproj.A
 C:\Users\aaron\Documents\GitHub\WebGames\Casion\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\aaron\Documents\GitHub\WebGames\Casion\Domain\obj\Debug\Domain.dll
 C:\Users\aaron\Documents\GitHub\WebGames\Casion\Domain\obj\Debug\Domain.pdb
+C:\Users\koehl\Documents\GitHub\Casino\Casion\Domain\bin\Debug\Domain.dll
+C:\Users\koehl\Documents\GitHub\Casino\Casion\Domain\bin\Debug\Domain.pdb
+C:\Users\koehl\Documents\GitHub\Casino\Casion\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache
+C:\Users\koehl\Documents\GitHub\Casino\Casion\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\koehl\Documents\GitHub\Casino\Casion\Domain\obj\Debug\Domain.dll
+C:\Users\koehl\Documents\GitHub\Casino\Casion\Domain\obj\Debug\Domain.pdb
