@@ -31,7 +31,7 @@ namespace LeaderBoardEntry
             result.Password = m.Password;
             result.Points = m.Points;
             result.Salt = m.Salt;
-
+            result.id = m.id;
             return result;
         }
 
@@ -45,7 +45,7 @@ namespace LeaderBoardEntry
             result.Password = m.Password;
             result.Points = m.Points;
             result.Salt = m.Salt;
-
+            result.id = m.id;
             return result;
         }
     }

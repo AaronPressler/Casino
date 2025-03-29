@@ -26,8 +26,9 @@ namespace Casino.Models
 
         public string Salt { get; set; }
 
-        public Guid id { get; set; }
+        public string Error { get; set; } = "";
 
+        public Guid id { get; set; }
 
         public static explicit operator LeaderBoardEntry.LoginModel(LoginModel m)
         {
@@ -40,6 +41,7 @@ namespace Casino.Models
             result.Points = m.Points;
             result.Age = m.Age;
             result.Salt = m.Salt;
+            result.id = m.id;
             return result;
         }
 
@@ -54,6 +56,7 @@ namespace Casino.Models
             result.Points = m.Points;
             result.Age = m.Age;
             result.Salt = m.Salt;
+            result.id = m.id;
             return result;
         }
     }

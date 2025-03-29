@@ -5,6 +5,10 @@
 }
 
 <h2>Punkte hinzufügen</h2>
+@if (Model != null && !string.IsNullOrEmpty(Model.Error))
+{
+    <h1>@Model.Error</h1>
+}
 <div class="form-container">
     @using (Html.BeginForm("Points", "Casino", FormMethod.Post))
     {
