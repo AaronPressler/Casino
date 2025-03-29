@@ -3,7 +3,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- Überschrift mit schwarzem Text -->
 <h1 class="page-title">Poker Automat</h1>
 
 <!-- Ausklappbarer Bereich für die Payout-Tabelle -->
@@ -96,12 +95,14 @@
     <div class="punkte-box">
         <label for="punkte">Punkte:</label>
         <input type="text" id="punkte" value="@Model.Punkte" readonly />
-        @using (Html.BeginForm("UpStake", "Casino", FormMethod.Post, new { id = "upStakeForm" }))
+        @using (Html.BeginForm("SetStake", "Casino", FormMethod.Post, new { id = "setStakeForm" }))
         {
-            <label for="multiplier" id="multiplierLabel" style="cursor:pointer;">Multiplier:</label>
-            <!-- Durch das Hinzufügen des name-Attributs wird der Wert beim Abschicken des Formulars übergeben -->
-            <input type="text" id="multiplier" name="stakeValue" value="@Model.Stake" readonly />
+            <label for="amount" style="cursor:pointer;">Multiplier:</label>
+            <input type="number" id="amount" name="amount" value="@Model.Stake" class="form-control" placeholder="Zahl eingeben" min="1" required />
         }
+
+
+
         <label for="Earnings">Earnings:</label>
         <input type="text" id="ernings" value="@Model.LatestErnings" readonly />
     </div>
