@@ -236,7 +236,7 @@ namespace Casino.Controllers
             {
                 DrawOrDeal = false;
                 Model.poker.ButtonName = "Draw";
-                if ((Model.poker.Punkte -= 10 * Model.poker.Stake) <= 0)
+                if ((Model.poker.Punkte - 10 * Model.poker.Stake) <= 0)
                 {
                     LoginModel lm = new LoginModel();
                     lm.Error = @"Sie haben nicht mehr genug punkte um weiter zuspielen. 

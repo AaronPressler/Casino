@@ -37,10 +37,7 @@ namespace DataLayer.JSON
                 s.Write(bytes, 0, bytes.Length);
             }
         }
-        public void UpdatePoints(Player person)
-        {
-
-        }
+       
         private List<Player> LoadData()
         {
             _filename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "data.json");
