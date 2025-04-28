@@ -229,7 +229,7 @@ namespace Casino.Controllers
             return View("Login");
         }
 
-        [HttpGet]
+        [HttpGet]  
         public ActionResult DisplayCards()
         {
             if (DrawOrDeal)
