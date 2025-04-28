@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Importieren von benötigten Namespaces
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web.Mvc;
@@ -16,16 +17,23 @@ namespace Casino.Controllers
 {
     public class CasinoController : Controller
     {
+        // Verbindung zur MySQL-Datenbank
         MySqlConnection _connection = new MySqlConnection();
 
+        // Kartenstapel und Kartenverwaltung
         public Stack<string> cardstack;
         public string[] aktivecards = new string[5];
         public List<string> pausedcards = new List<string>();
+
+        // Kontrolliert, ob gezogen oder gegeben wird
         public static bool DrawOrDeal = true;
 
+        // Instanz der Spiellogik
         Logic g = new Logic();
 
-        #region publicMethoden
+        #region Öffentliche Hilfsmethoden
+
+        // Konvertiert eine Liste von LoginModel in LeaderBoardEntry.LoginModel
         public List<LeaderBoardEntry.LoginModel> Converttolist(List<LoginModel> list)
         {
             List<LeaderBoardEntry.LoginModel> list2 = new List<LeaderBoardEntry.LoginModel>();
@@ -36,10 +44,10 @@ namespace Casino.Controllers
             return list2;
         }
 
+        // Lädt eine Liste der Benutzer
         public List<LoginModel> GetList()
         {
             List<LoginModel> list = new List<LoginModel>();
-
             List<LeaderBoardEntry.LoginModel> list2 = g.GetUsers();
             foreach (var item in list2)
             {
@@ -50,8 +58,9 @@ namespace Casino.Controllers
 
         #endregion
 
-        #region Register
+        #region Registrierung
 
+        // Registrierung eines neuen Benutzers
         [HttpPost]
         public ActionResult Register(LoginModel model)
         {
@@ -59,6 +68,7 @@ namespace Casino.Controllers
             List<LoginModel> list = GetList();
             if (ModelState.IsValid)
             {
+                // Prüfen, ob der Benutzername bereits existiert
                 foreach (var item in list)
                 {
                     if (item.UserName == model.UserName)
@@ -66,6 +76,7 @@ namespace Casino.Controllers
                         isnew = false;
                     }
                 }
+                // Neuen Benutzer hinzufügen
                 if (isnew)
                 {
                     g.AddNewUser(Converttolist(list), (LeaderBoardEntry.LoginModel)model);
@@ -75,6 +86,7 @@ namespace Casino.Controllers
             return View(model);
         }
 
+        // Registrierungsseite anzeigen
         public ActionResult Register()
         {
             return View();
@@ -82,14 +94,17 @@ namespace Casino.Controllers
         #endregion
 
         #region Login
+
+        // Benutzer-Login
         [HttpPost]
         public ActionResult Login(LoginModel user)
         {
             List<LoginModel> list = GetList();
             string pw = user.Password;
             string username = user.UserName;
-            string salt = g.GetSalt(username);
+            string salt = g.GetSalt(username); // Passwort-Salt holen
 
+            // Benutzername und Passwort überprüfen
             foreach (var item in list)
             {
                 if (username == item.UserName)
@@ -104,13 +119,16 @@ namespace Casino.Controllers
             return View();
         }
 
+        // Login-Seite anzeigen
         public ActionResult Login()
         {
             return View();
         }
         #endregion
 
-        #region Main Webseite
+        #region Haupt-Webseite
+
+        // Einstellungen-Seite
         public ActionResult Settings(LoginModel model)
         {
             var username = Session["Username"] as string;
@@ -120,8 +138,8 @@ namespace Casino.Controllers
             }
             return View(model);
         }
-        
 
+        // Punkte-Verwaltung
         [HttpGet]
         public ActionResult Points()
         {
@@ -133,6 +151,7 @@ namespace Casino.Controllers
             return View();
         }
 
+        // Benutzer ausloggen
         public ActionResult Logout()
         {
             Session["Username"] = null;
@@ -140,7 +159,8 @@ namespace Casino.Controllers
             return View("Login");
         }
 
-        public ActionResult Clear() 
+        // Benutzer-Datenbank leeren
+        public ActionResult Clear()
         {
             if (_connection.State != System.Data.ConnectionState.Closed)
                 _connection.Close();
@@ -155,6 +175,7 @@ namespace Casino.Controllers
             return View("Login");
         }
 
+        // Punkte hinzufügen
         [HttpPost]
         public ActionResult Points(LoginModel model)
         {
@@ -176,22 +197,19 @@ namespace Casino.Controllers
 
             g.SavePerson(Converttolist(list));
             ViewBag.Message = "Punkte wurden erfolgreich hinzugefügt!";
-
             return View("Settings", model);
         }
         #endregion
 
-        #region Poker
+        #region Poker-Logik
 
+        // Poker starten (POST)
         [HttpPost]
         public ActionResult Poker()
         {
             var username = Session["Username"] as string;
             if (string.IsNullOrEmpty(username))
-            {
                 return RedirectToAction("Login", "Casino");
-            }
-
 
             Model.poker = new PokerModel();
             Card cards = new Card();
@@ -199,15 +217,18 @@ namespace Casino.Controllers
             List<LoginModel> list = GetList();
             Model.cardstack = cards.ReturnStack();
 
+            // 5 Karten geben
             for (int i = 0; i < 5; i++)
             {
                 aktivecards[i] = Model.cardstack.Peek();
                 Model.cardstack.Pop();
             }
+
             string[] cardbacks = new string[5] { "CardBack", "CardBack", "CardBack", "CardBack", "CardBack" };
             Model.poker.Cards = cardbacks;
             Model.poker.Stake = 1;
 
+            // Punkte setzen
             foreach (var item in list)
                 if (item.UserName == Session["Username"].ToString())
                     Model.poker.Punkte = item.Points;
@@ -218,30 +239,30 @@ namespace Casino.Controllers
             return View(Model.poker);
         }
 
+        // Poker starten (GET, z.B. bei ungültigem Aufruf)
         [HttpGet]
         public ActionResult Poker(string signatur)
         {
             var username = Session["Username"] as string;
             if (string.IsNullOrEmpty(username))
-            {
                 return RedirectToAction("Login", "Casino");
-            }
+
             return View("Login");
         }
 
-        [HttpGet]  
+        // Karten anzeigen: entweder "Deal" oder "Draw"
+        [HttpGet]
         public ActionResult DisplayCards()
         {
             if (DrawOrDeal)
             {
                 DrawOrDeal = false;
                 Model.poker.ButtonName = "Draw";
+
                 if ((Model.poker.Punkte - 10 * Model.poker.Stake) <= 0)
                 {
                     LoginModel lm = new LoginModel();
-                    lm.Error = @"Sie haben nicht mehr genug punkte um weiter zuspielen. 
-                                Fügen sie mehr punkte hinzu um weiter zuspiele";
-
+                    lm.Error = "Sie haben nicht mehr genug Punkte zum Weiterspielen.";
                     return View("Points", lm);
                 }
                 return View("Poker", Deal());
@@ -254,19 +275,19 @@ namespace Casino.Controllers
             }
         }
 
+        // Erste 5 Karten geben ("Deal")
         public PokerModel Deal()
         {
             Card cards = new Card();
             string[] dealcards = new string[5];
             List<LoginModel> users = GetList();
+
             Model.poker.Punkte -= 10 * Model.poker.Stake;
 
             foreach (var user in users)
             {
                 if (user.UserName == Session["Username"].ToString())
-                {
                     user.Points = Model.poker.Punkte;
-                }
             }
             g.SavePerson(Converttolist(users));
 
@@ -274,9 +295,8 @@ namespace Casino.Controllers
             for (int i = 0; i < 5; i++)
             {
                 if (Model.cardstack.Count <= 5)
-                {
                     Model.cardstack = cards.ReturnStack();
-                }
+
                 dealcards[i] = Model.cardstack.Peek();
                 Model.cardstack.Pop();
             }
@@ -284,6 +304,7 @@ namespace Casino.Controllers
             return Model.poker;
         }
 
+        // Karten tauschen ("Draw")
         public PokerModel Draw()
         {
             List<string> dealcards = new List<string>();
@@ -291,9 +312,7 @@ namespace Casino.Controllers
             foreach (var item in Model.poker.heldcards)
             {
                 if (item != null)
-                {
                     dealcards.Add(item);
-                }
             }
 
             for (int i = 5 - dealcards.Count; i > 0; i--)
@@ -301,6 +320,7 @@ namespace Casino.Controllers
                 dealcards.Add(Model.cardstack.Peek());
                 Model.cardstack.Pop();
             }
+
             Model.poker.Cards = dealcards.ToArray();
             Model.poker.LatestErnings = g.GetPoints(Model.poker.Cards, Model.poker.Stake);
             Model.poker.Punkte += g.SperatePointsFromString(Model.poker.LatestErnings);
@@ -308,6 +328,7 @@ namespace Casino.Controllers
             return Model.poker;
         }
 
+        // Karte "halten" (bzw. nicht tauschen beim Draw)
         [HttpPost]
         public ActionResult HoldCard(PokerCard pc)
         {
@@ -327,6 +348,7 @@ namespace Casino.Controllers
             return View("Poker", Model.poker);
         }
 
+        // Karten neu geben
         public ActionResult GiveoutCards()
         {
             for (int i = 0; i < 5; i++)
@@ -337,6 +359,7 @@ namespace Casino.Controllers
             return View("Poker");
         }
 
+        // Karten wechseln (nach Pause oder ähnlichem)
         public ActionResult ChangeCards()
         {
             for (int i = 0; i < pausedcards.Count(); i++)
@@ -347,9 +370,9 @@ namespace Casino.Controllers
                 aktivecards[i] = cardstack.Peek();
                 cardstack.Pop();
             }
+
             Model.poker = new PokerModel();
             Card cards = new Card();
-
             List<LoginModel> list = GetList();
 
             foreach (var item in list)
@@ -359,9 +382,11 @@ namespace Casino.Controllers
             Model.poker.LeaderBoard = g.FillLeaderBoard();
             Model.poker.Cards = aktivecards;
             Model.poker.Stake = 1;
+
             return View("Poker");
         }
 
+        // Einsatz erhöhen
         public ActionResult UpStake()
         {
             if (DrawOrDeal)
@@ -369,12 +394,15 @@ namespace Casino.Controllers
             return View("Poker", Model.poker);
         }
 
+        // Einsatz setzen
         public ActionResult SetStake(int amount)
         {
             if (DrawOrDeal && amount > 0 && amount <= Model.poker.Punkte / 10)
                 Model.poker.Stake = amount;
             return View("Poker", Model.poker);
         }
+
+        // Einsatz verringern
         public ActionResult DownStake()
         {
             if (DrawOrDeal)
@@ -384,6 +412,8 @@ namespace Casino.Controllers
         }
 
         #endregion
+
+        // Zugriff auf das Session-Model
         protected SessionModel Model
         {
             get
