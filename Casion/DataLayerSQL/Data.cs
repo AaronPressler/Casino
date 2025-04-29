@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,12 @@ namespace DataLayerSQL
 {
     internal class Data
     {
+        public string Version { get; set; }
+        public List<Player> Persons { get; set; }
+
+        public Data()
+        {
+            Version = "1.0.1a";
+        }
     }
 }
