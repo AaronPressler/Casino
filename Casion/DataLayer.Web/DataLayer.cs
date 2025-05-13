@@ -1,32 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace DataLayer.Web
+using System.Text.Json;
+using Domain;
+public class UserClient
 {
-    internal class DataLayer
+    
+    public void UploadUser(string user)
     {
+        
+        string json = JsonSerializer.Serialize(user);
 
-    }
-    public class WebDataService
-    {
-        private readonly SqlDataLayer _sqlDataLayer;
-
-        public WebDataService()
+        using (WebClient client = new WebClient())
         {
-            _sqlDataLayer = new SqlDataLayer();
-        }
-
-        public void SaveData(YourDataModel model)
-        {
-            // Hier könnte man z.B. Validierungen einbauen
-            if (string.IsNullOrEmpty(model.Name))
-                throw new ArgumentException("Name darf nicht leer sein.");
-
-            _sqlDataLayer.InsertData(model);
+            client.Headers[HttpRequestHeader.ContentType] = "application/json";
+            try
+            {
+                client.UploadString("http://localhost:5000/", "POST", json);
+               
+            }
+            catch (WebException ex)
+            {
+               
+            }
         }
     }
+
+    public void DownloadUser(int userId)
+    {
+        using (WebClient client = new WebClient())
+        {
+            try
+            {
+                string json = client.DownloadString($"http://localhost:5000/api/user/{userId}");
+                Player user = JsonSerializer.Deserialize<Player>(json);
+            }
+            catch (WebException ex)
+            {
+            }
+        }
+    }
+
 
 }
