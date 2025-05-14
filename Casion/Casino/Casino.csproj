@@ -184,7 +184,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CasinoController.cs" />
-    <Compile Include="Controllers\DataController.cs" />
+    <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -282,6 +282,10 @@
     <ProjectReference Include="..\Cards\Cards.csproj">
       <Project>{271bcb23-2b2b-4506-99f4-7f28d5a6c93c}</Project>
       <Name>Cards</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{a77acbee-4a99-4a13-b862-f4522230cb16}</Project>
+      <Name>Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\Game.Logik\Game.Logic.csproj">
       <Project>{65cf11a0-1c78-4d2b-80d8-7c2032ea5806}</Project>
