@@ -20,7 +20,6 @@ public class UserClient
             try
             {
                 client.UploadString("http://localhost:5000/", "POST", json);
-               
             }
             catch (WebException ex)
             {
@@ -35,7 +34,7 @@ public class UserClient
         {
             try
             {
-                string json = client.DownloadString($"http://localhost:5000/api/user/{userId}");
+                string json = client.DownloadString($"http://localhost:5000/");
                 Player user = JsonSerializer.Deserialize<Player>(json);
             }
             catch (WebException ex)
