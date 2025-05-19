@@ -4,15 +4,15 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
-using Domain;
+using System.Web;
+using Newtonsoft.Json;
 public class UserClient
 {
-    
+    Casino.Controllers.PlayerController pc = new Casino.Controllers.PlayerController();
     public void UploadUser(string user)
     {
         
-        string json = JsonSerializer.Serialize(user);
+        string json = JsonSerializer.Serialize(pc.GetUsers());
 
         using (WebClient client = new WebClient())
         {

@@ -31,6 +31,7 @@ namespace Casino.Controllers
 
         public List<LoginModel> GetList()
         {
+            Logic g = new Logic();
             List<LoginModel> list = new List<LoginModel>();
             List<LeaderBoardEntry.LoginModel> list2 = g.GetUsers();
             foreach (var item in list2)
