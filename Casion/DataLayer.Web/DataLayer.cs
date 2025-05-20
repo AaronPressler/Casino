@@ -25,9 +25,10 @@ public class UserClient : IDataLayer
         Data data = new Data(players);
         using (WebClient client = new WebClient())
         {
+            client.Headers[HttpRequestHeader.ContentType] = "application/json";
             try
             {
-                data = JsonConvert.DeserializeObject(client.DownloadString($"http://localhost:5000/application/json")) as Data;
+                data = JsonConvert.DeserializeObject(client.DownloadString("http://localhost:1234/User/GetUserData")) as Data;
             }
             catch (WebException ex)
             {
