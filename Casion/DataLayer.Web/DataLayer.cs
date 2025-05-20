@@ -15,8 +15,14 @@ public class UserClient : IDataLayer
 
     public List<Player> LoadPersons()
     {
-
-        Data data = null;
+        Player player = new Player()
+        {
+            UserName = "Aaron",
+            Password = "123"
+        };
+        List<Player> players = new List<Player>() { player };
+        
+        Data data = new Data(players);
         using (WebClient client = new WebClient())
         {
             try
