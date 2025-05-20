@@ -15,14 +15,9 @@ public class UserClient : IDataLayer
 
     public List<Player> LoadPersons()
     {
-        Player player = new Player()
-        {
-            UserName = "Aaron",
-            Password = "123"
-        };
-        List<Player> players = new List<Player>() { player };
-        
-        Data data = new Data(players);
+
+
+        Data data = new Data();
         using (WebClient client = new WebClient())
         {
             client.Headers[HttpRequestHeader.ContentType] = "application/json";

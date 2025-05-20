@@ -40,3 +40,9 @@ C:\Users\aaron\Documents\GitHub\CasinoNew\Casion\Cards\obj\Debug\Cards.csproj.As
 C:\Users\aaron\Documents\GitHub\CasinoNew\Casion\Cards\obj\Debug\Cards.csproj.CoreCompileInputs.cache
 C:\Users\aaron\Documents\GitHub\CasinoNew\Casion\Cards\obj\Debug\Cards.dll
 C:\Users\aaron\Documents\GitHub\CasinoNew\Casion\Cards\obj\Debug\Cards.pdb
+C:\Users\aaron\Documents\GitHub\Casino2\Casion\Cards\bin\Debug\Cards.dll
+C:\Users\aaron\Documents\GitHub\Casino2\Casion\Cards\bin\Debug\Cards.pdb
+C:\Users\aaron\Documents\GitHub\Casino2\Casion\Cards\obj\Debug\Cards.csproj.AssemblyReference.cache
+C:\Users\aaron\Documents\GitHub\Casino2\Casion\Cards\obj\Debug\Cards.csproj.CoreCompileInputs.cache
+C:\Users\aaron\Documents\GitHub\Casino2\Casion\Cards\obj\Debug\Cards.dll
+C:\Users\aaron\Documents\GitHub\Casino2\Casion\Cards\obj\Debug\Cards.pdb
