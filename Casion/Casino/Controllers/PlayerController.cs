@@ -22,11 +22,15 @@ namespace Casino.Controllers
 
     public class PlayerController : Controller
     {
-      
         
         public PlayerController()
         {
            
+        }
+        public JsonResult GetUserData()
+        {
+            string jsonString = JsonConvert.SerializeObject(GetList(), Formatting.Indented);
+            return Json(jsonString, JsonRequestBehavior.AllowGet); 
         }
 
         public List<LoginModel> GetList()

@@ -21,7 +21,7 @@ public class UserClient : IDataLayer
         {
             try
             {
-                data = JsonConvert.DeserializeObject(client.DownloadString($"http://localhost:5000/application/json/")) as Data;
+                data = JsonConvert.DeserializeObject(client.DownloadString($"http://localhost:5000/application/json")) as Data;
             }
             catch (WebException ex)
             {
@@ -39,7 +39,7 @@ public class UserClient : IDataLayer
             client.Headers[HttpRequestHeader.ContentType] = "application/json";
             try
             {
-                client.UploadString("http://localhost:5000/application/json/", "POST", jsonString);
+                client.UploadString("http://localhost:5000/application/json", "POST", jsonString);
             }
             catch (WebException ex)
             {
