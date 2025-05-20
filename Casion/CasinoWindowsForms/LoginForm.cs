@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DataLayer.Web;
 namespace CasinoWindowsForms
 {
     public partial class LoginForm : Form
@@ -39,6 +39,31 @@ namespace CasinoWindowsForms
         private void lblPassword_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Domain.Player player = new Domain.Player()
+            {
+                UserName = tbxUsername.Text,
+                Password = tbxPassword.Text
+            };
+            
+            
+            UserClient client = new UserClient();
+            List<Domain.Player> playerList = client.LoadPersons();
+            if(playerList.Contains(player))
+            {
+                WelcomeForm wf = new WelcomeForm();
+                wf.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("User Does NOT Exist");
+                return;
+            }
+            
         }
     }
 }

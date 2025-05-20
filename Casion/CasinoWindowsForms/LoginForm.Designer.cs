@@ -32,12 +32,13 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.gbLogin = new System.Windows.Forms.GroupBox();
-            this.gbRegisterLink = new System.Windows.Forms.GroupBox();
-            this.lblNoAccount = new System.Windows.Forms.Label();
-            this.lblRegister = new System.Windows.Forms.Label();
-            this.tbxUsername = new System.Windows.Forms.TextBox();
             this.tbxPassword = new System.Windows.Forms.TextBox();
+            this.tbxUsername = new System.Windows.Forms.TextBox();
+            this.gbRegisterLink = new System.Windows.Forms.GroupBox();
+            this.lblRegister = new System.Windows.Forms.Label();
+            this.lblNoAccount = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnLogin = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.gbRegisterLink.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +70,7 @@
             this.gbLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.gbLogin.Controls.Add(this.btnLogin);
             this.gbLogin.Controls.Add(this.tbxPassword);
             this.gbLogin.Controls.Add(this.tbxUsername);
             this.gbLogin.Controls.Add(this.lblUsername);
@@ -80,6 +82,25 @@
             this.gbLogin.TabIndex = 7;
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Login";
+            // 
+            // tbxPassword
+            // 
+            this.tbxPassword.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.tbxPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
+            this.tbxPassword.Location = new System.Drawing.Point(46, 159);
+            this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.PasswordChar = '♠';
+            this.tbxPassword.Size = new System.Drawing.Size(361, 39);
+            this.tbxPassword.TabIndex = 10;
+            // 
+            // tbxUsername
+            // 
+            this.tbxUsername.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.tbxUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
+            this.tbxUsername.Location = new System.Drawing.Point(46, 82);
+            this.tbxUsername.Name = "tbxUsername";
+            this.tbxUsername.Size = new System.Drawing.Size(361, 39);
+            this.tbxUsername.TabIndex = 9;
             // 
             // gbRegisterLink
             // 
@@ -95,16 +116,6 @@
             this.gbRegisterLink.TabIndex = 8;
             this.gbRegisterLink.TabStop = false;
             // 
-            // lblNoAccount
-            // 
-            this.lblNoAccount.AutoSize = true;
-            this.lblNoAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.lblNoAccount.Location = new System.Drawing.Point(6, 18);
-            this.lblNoAccount.Name = "lblNoAccount";
-            this.lblNoAccount.Size = new System.Drawing.Size(237, 23);
-            this.lblNoAccount.TabIndex = 9;
-            this.lblNoAccount.Text = "Don\'t have an account?";
-            // 
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
@@ -117,30 +128,33 @@
             this.lblRegister.Text = "Create Account";
             this.lblRegister.Click += new System.EventHandler(this.label1_Click);
             // 
-            // tbxUsername
+            // lblNoAccount
             // 
-            this.tbxUsername.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tbxUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
-            this.tbxUsername.Location = new System.Drawing.Point(46, 82);
-            this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Size = new System.Drawing.Size(361, 39);
-            this.tbxUsername.TabIndex = 9;
-            // 
-            // tbxPassword
-            // 
-            this.tbxPassword.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tbxPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
-            this.tbxPassword.Location = new System.Drawing.Point(46, 159);
-            this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.PasswordChar = '♠';
-            this.tbxPassword.Size = new System.Drawing.Size(361, 39);
-            this.tbxPassword.TabIndex = 10;
+            this.lblNoAccount.AutoSize = true;
+            this.lblNoAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lblNoAccount.Location = new System.Drawing.Point(6, 18);
+            this.lblNoAccount.Name = "lblNoAccount";
+            this.lblNoAccount.Size = new System.Drawing.Size(237, 23);
+            this.lblNoAccount.TabIndex = 9;
+            this.lblNoAccount.Text = "Don\'t have an account?";
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(684, 189);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(171, 44);
+            this.btnLogin.TabIndex = 14;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // LoginForm
             // 
@@ -173,6 +187,7 @@
         private System.Windows.Forms.TextBox tbxPassword;
         private System.Windows.Forms.TextBox tbxUsername;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 

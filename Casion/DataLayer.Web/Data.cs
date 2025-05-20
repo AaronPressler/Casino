@@ -16,5 +16,10 @@ namespace DataLayer.Web
         {
            Version = "1.0.1a";
         }
+
+        public Data(List<Player> persons)
+        {
+            Persons = persons;
+        }
     }
 }
