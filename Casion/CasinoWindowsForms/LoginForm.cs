@@ -25,9 +25,12 @@ namespace CasinoWindowsForms
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegisterForm registerForm = new RegisterForm(); 
-            registerForm.ShowDialog();
-            this.Close();
+            RegisterForm rf = new RegisterForm();
+            if (rf.ShowDialog() == DialogResult.OK)
+            {
+                string UserName = rf.UserName;
+                tbxUsername.Text = UserName;
+            }
 
         }
 
@@ -55,7 +58,6 @@ namespace CasinoWindowsForms
             if(playerList.Contains(player))
             {
                 WelcomeForm wf = new WelcomeForm();
-                wf.Show();
                 this.Close();
             }
             else
