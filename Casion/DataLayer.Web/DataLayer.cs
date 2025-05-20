@@ -5,43 +5,51 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using DataLayer.Web;
+using Domain;
 using Newtonsoft.Json;
-public class UserClient
+public class UserClient : IDataLayer
 {
     Casino.Controllers.PlayerController pc = new Casino.Controllers.PlayerController();
-    public void UploadUser(string user)
+   
+
+    public List<Player> LoadPersons()
     {
-        
-        string json = JsonSerializer.Serialize(pc.GetUsers());
+
+        Data data = null;
+        using (WebClient client = new WebClient())
+        {
+            try
+            {
+                data = JsonConvert.DeserializeObject(client.DownloadString($"http://localhost:5000/application/json/")) as Data;
+            }
+            catch (WebException ex)
+            {
+            }
+        }
+        return data.Persons;
+    }
+
+    public void SavePersons(List<Player> persons)
+    {
+        string jsonString = JsonConvert.SerializeObject(persons, Formatting.Indented);
 
         using (WebClient client = new WebClient())
         {
             client.Headers[HttpRequestHeader.ContentType] = "application/json";
             try
             {
-                client.UploadString("http://localhost:5000/", "POST", json);
+                client.UploadString("http://localhost:5000/application/json/", "POST", jsonString);
             }
             catch (WebException ex)
             {
-               
+
             }
         }
     }
 
-    public void DownloadUser(int userId)
+    public string GetUTF8(string person)
     {
-        using (WebClient client = new WebClient())
-        {
-            try
-            {
-                string json = client.DownloadString($"http://localhost:5000/");
-                Player user = JsonSerializer.Deserialize<Player>(json);
-            }
-            catch (WebException ex)
-            {
-            }
-        }
+        throw new NotImplementedException();
     }
-
-
 }

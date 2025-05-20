@@ -31,6 +31,7 @@ namespace Casino.Controllers
 
         public List<LoginModel> GetList()
         {
+            Request.InputStream.Position = 0;
             Logic g = new Logic();
             List<LoginModel> list = new List<LoginModel>();
             List<LeaderBoardEntry.LoginModel> list2 = g.GetUsers();
