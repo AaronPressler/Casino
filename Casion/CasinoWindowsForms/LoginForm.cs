@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataLayer.Web;
 namespace CasinoWindowsForms
 {
     public partial class LoginForm : Form
@@ -46,26 +38,27 @@ namespace CasinoWindowsForms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Domain.Player player = new Domain.Player()
-            {
-                UserName = tbxUsername.Text,
-                Password = tbxPassword.Text
-            };
-            
-            
+
+
+            string username = tbxUsername.Text;
+            string password = tbxPassword.Text;
+
             UserClient client = new UserClient();
-            List<Domain.Player> playerList = client.LoadPersons();
-            if(playerList.Contains(player))
+            bool loginSuccess = client.Login(username, password);
+            
+            if (loginSuccess)
             {
                 WelcomeForm wf = new WelcomeForm();
+                wf.ShowDialog();
                 this.Close();
             }
             else
             {
-                MessageBox.Show("User Does NOT Exist");
-                return;
+                MessageBox.Show("Benutzername oder Passwort ist falsch.");
             }
             
         }
+
     }
 }
+

@@ -33,7 +33,7 @@ namespace CasinoWindowsForms
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Domain.Player player = new Domain.Player()
+            /*Domain.Player player = new Domain.Player()
             {
                 UserName = tbxUsername.Text,
                 Password = tbxPassword.Text
@@ -41,7 +41,8 @@ namespace CasinoWindowsForms
             if(IsOldEnough(dateTimePicker1.Value))
             {
                 UserClient client = new UserClient();
-                List<Domain.Player> playerList = client.LoadPersons();
+                List<Domain.Player> playerList = new List<Domain.Player>();
+                playerList = client.LoadPersons();
                 if (playerList.Contains(player))
                 {
                     MessageBox.Show("User already Exists!");
@@ -57,8 +58,28 @@ namespace CasinoWindowsForms
                     LoginForm loginForm = new LoginForm();
                     loginForm.Show();
                 }
+            }*/
+            UserClient client = new UserClient();
+            bool registrationSuccess = client.Register(tbxUsername.Text, tbxPassword.Text);
+
+            if (registrationSuccess)
+            {
+                MessageBox.Show("Registrierung erfolgreich!");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
             }
-            
+            else
+            {
+                MessageBox.Show("Registrierung fehlgeschlagen!");
+            }
+
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

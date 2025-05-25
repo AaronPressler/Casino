@@ -177,6 +177,7 @@
             this.Controls.Add(this.gbRegister);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.gbRegisterLink.ResumeLayout(false);
             this.gbRegisterLink.PerformLayout();
             this.gbRegister.ResumeLayout(false);

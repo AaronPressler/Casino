@@ -88,6 +88,10 @@
       <Project>{a77acbee-4a99-4a13-b862-f4522230cb16}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LeaderBoardEntry\Models.csproj">
+      <Project>{76C76948-B5C4-43D7-89F1-EFA3CDCBA97A}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
